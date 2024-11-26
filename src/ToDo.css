@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #faf9f9;
+}
+.right{
+  width: 60vw;
+}
+.headerName {
+  color: black;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.mainTodo {
+  width: 28vw;
+  height:fit-content;
+  margin: auto;
+  background-color: rgb(26, 22, 22);
+  border-radius: 10px;
+  padding-bottom: 2rem;
+}
+form {
+  width: 95%;
+  display: flex;
+  padding: 1rem;
+  justify-content: space-evenly;
+}
+#inputTask {
+  flex: 0.6;
+  padding: 0.4rem;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+}
+/* From Uiverse.io by cssbuttons-io */
+#Add {
+  flex: 0.2;
+  --glow-color: rgb(217, 176, 255);
+  --glow-spread-color: rgba(191, 123, 255, 0.781);
+  --enhanced-glow-color: rgb(231, 206, 255);
+  --btn-color: rgb(103, 75, 129);
+  border: 0.25em solid var(--glow-color);
+  padding: 1em 1.5em;
+  color: var(--glow-color);
+  font-size: 12px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 3em 1em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+  text-shadow: 0 0 0.5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+  width: 25%;
+}
+
+#Add::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(1em);
+  opacity: 0.7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+}
+
+#Add:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 3em 1em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+  cursor: pointer;
+}
+
+#Add:active {
+  box-shadow: 0 0 0.6em 0.25em var(--glow-color),
+    0 0 2.5em 2em var(--glow-spread-color),
+    inset 0 0 0.5em 0.25em var(--glow-color);
+}
+ul {
+  width: 100%;
+  height: fit-content;
+  color: wheats;
+  margin-top: 3rem;
+}
+.listElement {
+
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  height: 35px;
+  margin-bottom: 1rem;
+
+}
+.listElement span {
+  flex: 0.7;
+  text-align: left;
+  padding-left: 0.3rem;
+  background-color: whitesmoke;
+  height: 100%;
+  border-radius: 10px;
+  margin-right: .3rem;
+  overflow: hidden;
+  font-weight: bolder;
+
+}
+.delBtn {
+  flex: 0.1;
+  background-color: red;
+  height: 100%;
+  padding: 0.3rem;
+  color: white;
+  margin-right: 1rem;
+  outline: none;
+  border: 2px solid rgb(204, 72, 72);
+  border-radius: 5px;
+}
+.delBtn:hover {
+  cursor: pointer;
+  font-weight: bolder;
+  transition: 0.3s ease smooth;
+}
+.moveUpTask {
+  flex: 0.1;
+  height: 100%;
+  background-color: rgba(45, 186, 230, 0.521);
+  margin-right: 1rem;
+  padding: 0.3rem;
+  border-radius: 10px;
+  border: 1px solid white;
+}
+.moveUpTask:hover {
+  cursor: pointer;
+  transition: 0.3s ease smooth;
+}
+.moveDownBtn {
+  flex: 0.1;
+  height: 100%;
+  background-color: rgba(45, 186, 230, 0.521);
+  padding: 0.3rem;
+  border-radius: 10px;
+  border: 1px solid white;
+}
+.moveDownBtn:hover{
+  cursor: pointer;
+  transition: 0.3s ease smooth;
+}
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #faf9f9;
+  font-family: Arial, sans-serif;
+}
+
+.right {
+  width: 60vw;
+}
+
+.headerName {
+  color: black;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.mainTodo {
+  width: 28vw;
+  height: fit-content;
+  margin: auto;
+  background-color: rgb(26, 22, 22);
+  border-radius: 10px;
+  padding-bottom: 2rem;
+}
+
+/* Responsive Layout for Tablets */
+@media screen and (max-width: 768px) {
+  .mainTodo {
+    width: 60vw; /* Make the container wider for tablets */
+    padding: 1rem;
+  }
+
+  form {
+    flex-direction: column; /* Stack form elements */
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  #inputTask {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    padding: 0.5rem;
+  }
+
+  #Add {
+    width: 100%; /* Full-width button for tablets */
+  }
+
+  ul {
+    margin-top: 2rem;
+  }
+
+  .listElement {
+    width: 90%; /* Adjust list element width */
+    height: 50px; /* Larger height for touch-friendly design */
+  }
+
+  .listElement span {
+    font-size: 14px; /* Adjust text size */
+  }
+
+  .delBtn, .moveUpTask, .moveDownBtn {
+    padding: 0.4rem;
+    font-size: 12px; /* Smaller buttons */
+  }
+}
+
+/* Responsive Layout for Mobiles */
+@media screen and (max-width: 480px) {
+  .mainTodo {
+    width: 90vw; /* Full width for small screens */
+    padding: 1rem;
+  }
+
+  form {
+    flex-direction: column; /* Stack form elements vertically */
+    gap: 0.8rem;
+  }
+
+  #inputTask {
+    font-size: 14px;
+    padding: 0.5rem;
+  }
+
+  #Add {
+    width: 100%;
+    padding: 0.7rem; 
+    font-size: 14px;
+  }
+
+  ul {
+    margin-top: 1.5rem;
+  }
+
+  .listElement {
+    width: 100%; /* Full width */
+    height: 30px; /* Compact height for smaller screens */
+  }
+
+  .listElement span {
+    font-size: 1.3rem;
+  }
+
+  .delBtn, .moveUpTask, .moveDownBtn {
+    padding: 0.3rem;
+    font-size: 10px; /* Compact buttons for smaller screens */
+  }
+}
